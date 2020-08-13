@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="RPS.css">
+    <title>ROCK,PAPER,SCISSORS</title>
+</head>
+<body style="background-color: darkgrey;">
+
+    <div id="title" class="title">
+        Rock, Paper, Scissors
+    </div>
+
+    <div id="button" class="center">
+        <button id="shoot" onclick="main()">SHOOT!</button>
+    </div>
+
+    <div id="images" class="images">
+        <img hidden id="rock" src="Rock.png" width="1280/5" height="897/4">
+        <img hidden id="paper" src="Paper.png" width="250" height="250">
+        <img hidden id="scissors" src="Scissors.png">    
+    </div>
+
+    <div id="numbers" class="images">
+        <img hidden id="one" src="1-Number-PNG.png" width="100" height="100">
+        <img hidden id="two" src="2-Number-PNG.png" width="100" height="100">
+        <img hidden id="three" src="3-Number-PNG.png" width="100" height="100">
+    </div>
+
+    <div id="score" class="score">
+        <button id="win" onclick="win()">WIN</button>
+        <button id="lose" onclick="lose()">LOSE</button>
+        <button id="tie" onclick="tie()">TIE</button>
+
+        <p id="text">WINS:0--LOSSES:0--TIES:0</p>
+    </div>
+
+    <script src="RPS.js"></script>
+    
+</body>
+</html>
