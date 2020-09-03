@@ -1,70 +1,38 @@
-document.getElementById("rock").width = 250;
-document.getElementById('rock').height = 250;
+function physics() {
+    document.getElementById("math").style.display = "none";
+    document.getElementById("mathPics").style.display = "none";
+    document.getElementById("mathButtons").style.display = "none";
 
-var winner = 0;
-var loser = 0;
-var ties = 0;
-
-function win() {
-    winner = winner + 1;
-
-    document.getElementById("text").innerText = "WINS:" + winner + "--LOSSES:" + loser + "--TIES:" + ties
+    document.getElementById("physicsPics").style.display = "block";
 }
 
-function lose() {
-    loser = loser + 1;
+function quadratic() {
+    var strA = prompt("Enter the value of 'a'.");
+    var strB = prompt("Enter the value of 'b'.");
+    var strC = prompt("Enter the value of 'c'.");
 
-    document.getElementById("text").innerText = "WINS:" + winner + "--LOSSES:" + loser + "--TIES:" + ties
+    a = parseFloat(strA);
+    b = parseFloat(strB);
+    c = parseFloat(strC);
+
+    var left = ((b*-1)/(2*a));
+    var right = Math.sqrt((b*b)-(4*a*c))/(2*a);
+
+    var ans1 = left + right;
+    var ans2 = left - right;
+
+    alert("Your answer is: " + "X= " + ans1 + ", " + ans2);
 }
 
-function tie() {
-    ties = ties + 1;
+function pythag() {
+    var strA = prompt("Enter the value of 'a'");
+    var strB = prompt("Enter the value of 'b'");
 
-    document.getElementById("text").innerText = "WINS:" + winner + "--LOSSES:" + loser + "--TIES:" + ties
+    a = parseFloat(strA);
+    b = parseFloat(strB);
+
+    var ans = (a*a)+(b*b);
+    var rootAns = Math.sqrt(ans);
+
+    alert("The value of C squared is " + ans + " and the root of that is " + rootAns);
 }
-
-function main() {
-    var ans = Math.floor(Math.random()*3);
-
-    document.getElementById("paper").style.display = "none";
-    document.getElementById("scissors").style.display = "none";
-    document.getElementById("rock").style.display = "none";
-
-    document.getElementById("three").style.display = "block";
-
-    setTimeout(function two() {
-        document.getElementById("three").style.display = "none";
-        document.getElementById("two").style.display = "block";
-    }, 750);
-
-    setTimeout(function three() {
-        document.getElementById("two").style.display = "none";
-        document.getElementById("one").style.display = "block";
-    }, 1500);
-
-    setTimeout(function answer() {
-        document.getElementById("one").style.display = "none";
-        document.getElementById("two").style.display = 'none';
-        document.getElementById("three").style.display = "none";
-
-        if (ans == 0) {
-            document.getElementById('paper').style.display = "none";
-            document.getElementById('scissors').style.display = "none";
-    
-            document.getElementById('rock').style.display = "block";
-        }
-        else if (ans == 1) {
-            document.getElementById('paper').style.display = "none";
-            document.getElementById('rock').style.display = "none";
-    
-            document.getElementById('scissors').style.display = "block";
-        }
-        else if (ans == 2) {
-            document.getElementById('rock').style.display = "none";
-            document.getElementById('scissors').style.display = "none";
-    
-            document.getElementById('paper').style.display = "block";
-        }    
-    }, 2250)
-};
-
