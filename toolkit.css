@@ -9,10 +9,11 @@
 
 .physics {
     font-size: 100px;
-    width: 35%;
+    width: 25%;
     text-align: center;
     background-color: black;
     color: white;
+    float: left;
 }
 
 .math {
@@ -21,33 +22,29 @@
     text-align: center;
     background-color: black;
     color: white;
-    float: right;
+    float: left;
 }
 
 .quadPic {
     text-align: center;
     background-color: white;
-    margin-bottom: 0;
-    float: right;
+    width: 25%;
 }
 
 .mathButton {
     width: 25%;
+    border: solid black 1px;
     background-color: gray opacity 0.5;
     padding: 10px 10px;
     font-size: 25px;
     cursor: pointer;
     text-align: center;
-    margin-top: 0px;
-    margin-left: 75%;
 }
 
 .pyPic {
     width: 25%;
+    background-color: white;
     text-align: center;
-    margin-bottom: 0;
-    margin-left: 75%;
-    position: static;
 }
 
 .kinematicPic {
