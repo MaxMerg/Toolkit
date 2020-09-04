@@ -1,9 +1,25 @@
-function physics() {
-    document.getElementById("math").style.display = "none";
-    document.getElementById("mathPics").style.display = "none";
-    document.getElementById("mathButtons").style.display = "none";
+function mathTicker() {
+    document.getElementById("mathTicker").style.display = "none";
+    document.getElementById("physics").style.display = "none";
+    document.getElementById("physicsPics").style.display = "none";
+    document.getElementById("physicsTicker").style.display = "block";
 
-    document.getElementById("physicsPics").style.display = "block";
+    document.getElementById("mathButtons").style.display = "block";
+    document.getElementById("mathPics").style.display = "block";
+    document.getElementById("math").style.display = "block";
+
+}
+
+function physicsTicker() {
+    document.getElementById("mathTicker").style.display = "block";
+    document.getElementById("physicsTicker").style.display = "none";
+
+    document.getElementById("mathButtons").style.display = "none";
+    document.getElementById("mathPics").style.display = "none";
+    document.getElementById("math").style.display = "none";
+
+    document.getElementById("physicsPics").style.display = "block"
+    document.getElementById("physics").style.display = "block";
 }
 
 function quadratic() {
