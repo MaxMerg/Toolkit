@@ -8,6 +8,8 @@ function mathTicker() {
     document.getElementById("mathPics").style.display = "block";
     document.getElementById("math").style.display = "block";
 
+    document.getElementById("comingSoon").style.display = "none";
+
 }
 
 function physicsTicker() {
@@ -18,8 +20,10 @@ function physicsTicker() {
     document.getElementById("mathPics").style.display = "none";
     document.getElementById("math").style.display = "none";
 
-    document.getElementById("physicsPics").style.display = "block"
-    document.getElementById("physics").style.display = "block";
+    document.getElementById("comingSoon").style.display = "block";
+
+    //document.getElementById("physicsPics").style.display = "block"
+    //document.getElementById("physics").style.display = "block";
 }
 
 function quadratic() {
