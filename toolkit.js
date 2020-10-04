@@ -35,13 +35,29 @@ function quadratic() {
     b = parseFloat(strB);
     c = parseFloat(strC);
 
+    var ans1;
+    var ans2;
+
+    var top = (b*b)-(4*a*c); 
     var left = ((b*-1)/(2*a));
-    var right = Math.sqrt((b*b)-(4*a*c))/(2*a);
+    var right = Math.sqrt((top))/(2*a);
+    var strTop = top.toString();
 
-    var ans1 = left + right;
-    var ans2 = left - right;
+    if (strTop.charAt(0) == "-") {
+        top = top * -1;
+        right = Math.sqrt((top))/(2*a);
+        ans1 = left + right;
+        ans2 = left - right;
 
-    alert("Your answer is: " + "X= " + ans1 + ", " + ans2);
+        alert(ans1 + "i, " + ans2 + "i");
+    }else {
+        ans1 = left + right;
+        ans2 = left - right;
+
+        alert(ans1 + ", " + ans2);
+    }
+//var left = ((b*-1)/(2*a));
+//var right = Math.sqrt((b*b)-(4*a*c))/(2*a);
 }
 
 function pythag() {
@@ -54,5 +70,27 @@ function pythag() {
     var ans = (a*a)+(b*b);
     var rootAns = Math.sqrt(ans);
 
-    alert("The value of C squared is " + ans + " and the root of that is " + rootAns);
+    alert("The value of C squared is " + ans + " and the value of C is " + rootAns);
+}
+
+function circArea() {
+    var strRad = prompt("Enter the value of 'r' or radius");
+
+    rad = parseFloat(strRad);
+
+    radRad = rad*rad;
+
+    var ans = Math.PI*radRad;
+
+    alert("The value of A or Area is " + ans);
+}
+
+function circum() {
+    var strRad = prompt("Enter the value of 'r' or radius");
+
+    rad = parseFloat(strRad);
+
+    ans = rad*2*Math.PI;
+
+    alert("The value of C or Circumference is " + ans);
 }
