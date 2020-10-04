@@ -21,7 +21,7 @@
     <button hidden id="mathTicker" class="mathButton" onclick="mathTicker()">Click here for Math Equations</button>
     <button id="physicsTicker" class="mathButton" onclick="physicsTicker()">Click here for Physics Equations</button>
 
-    <p hidden id="comingSoon">Physics Equations COMING SOON!!</p>
+    <p hidden style="font-size: 100px" id="comingSoon">Physics Equations COMING SOON!!</p>
 
 <!--These are the formula's pictures--> 
 
@@ -34,7 +34,16 @@
     <div class="pyPic" id="pyPic">
         <img src="py.png">
     </div>
+
+    <div class="circAreaPic" id="circAreaPic">
+        <img src="CircArea.jpg">
+    </div>
+
+    <div class="circum" id="circum">
+        <img src="Circum.jpg">
+    </div>
 </div>
+
  <!--Physics-->
 <div hidden id="physicsPics">
     <div class="kinematicPic" id="kinematicPic">
@@ -46,9 +55,11 @@
  <!--Math-->
 <div id="mathButtons">
         <button class="mathButton" onclick="quadratic()">1. Quadratic Formula</button>
-
         <button class="mathButton" onclick="pythag()">2. Pythagorean Theorem</button>
+        <button class="mathButton" onclick="circArea()">3. Area of a Circle</button>
+        <button class="mathButton" onclick="circum()">4. Circumference of a Circle</button>
 </div>
+
  <!--Physics-->
 
     <script src="toolkit.js"></script>
